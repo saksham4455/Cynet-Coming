@@ -257,6 +257,51 @@ body {
   }
 }
 
+/* Responsive media queries */
+@media screen and (max-width: 640px) {
+  /* Small mobile devices */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Adjust tap targets */
+  button, a {
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  /* Tablets */
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Desktop */
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* Reduce vertical padding on landscape mobile */
+  h1 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 /* Prevent text selection on interactive elements */
 .no-select {
   -webkit-user-select: none;
@@ -398,4 +443,56 @@ body {
   height: 2px;
   border-radius: 50%;
   pointer-events: none;
+}
+
+/* Responsive utilities */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.responsive-text-sm {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+.responsive-text-md {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.responsive-text-lg {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.responsive-text-xl {
+  font-size: clamp(2rem, 8vw, 5rem);
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Accessibility - respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -276,19 +276,20 @@ const IntroSequence = ({ onComplete }) => {
                 <motion.button
                     style={{
                         position: 'fixed',
-                        top: 'clamp(1rem, 3vw, 2rem)',
-                        right: 'clamp(1rem, 3vw, 2rem)',
-                        padding: 'clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem)',
+                        top: 'clamp(0.75rem, 2.5vw, 2rem)',
+                        right: 'clamp(0.75rem, 2.5vw, 2rem)',
+                        padding: 'clamp(0.4rem, 1.5vw, 0.8rem) clamp(0.8rem, 2.5vw, 1.5rem)',
                         backgroundColor: 'rgba(0, 217, 255, 0.1)',
-                        border: '2px solid #00D9FF',
+                        border: '1px solid #00D9FF',
                         color: '#00D9FF',
                         fontFamily: 'Courier New, monospace',
-                        fontSize: 'clamp(0.8rem, 2vw, 1rem)',
+                        fontSize: 'clamp(0.65rem, 1.8vw, 1rem)',
                         cursor: 'pointer',
                         zIndex: 1000,
                         backdropFilter: 'blur(10px)',
                         textTransform: 'uppercase',
-                        letterSpacing: '2px'
+                        letterSpacing: 'clamp(1px, 0.3vw, 2px)',
+                        borderRadius: '4px'
                     }}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -327,9 +328,9 @@ const IntroSequence = ({ onComplete }) => {
                     <motion.div
                         style={{
                             color: '#00D9FF',
-                            fontSize: 'clamp(1.5rem, 4vw, 3rem)',
+                            fontSize: 'clamp(1rem, 3.5vw, 3rem)',
                             fontFamily: 'Courier New, monospace',
-                            letterSpacing: '0.5em'
+                            letterSpacing: 'clamp(0.2em, 0.5vw, 0.5em)'
                         }}
                         animate={{
                             opacity: [1, 0.5, 1],
@@ -344,10 +345,10 @@ const IntroSequence = ({ onComplete }) => {
                         INITIALIZING
                     </motion.div>
 
-                    <div style={{ width: 'clamp(200px, 60vw, 400px)', position: 'relative' }}>
+                    <div style={{ width: 'clamp(200px, 70vw, 400px)', position: 'relative' }}>
                         <div style={{
                             width: '100%',
-                            height: '4px',
+                            height: 'clamp(3px, 0.5vw, 4px)',
                             backgroundColor: 'rgba(26, 26, 26, 0.6)',
                             borderRadius: '2px',
                             overflow: 'hidden'
@@ -366,9 +367,9 @@ const IntroSequence = ({ onComplete }) => {
                         <motion.div
                             style={{
                                 color: '#39FF14',
-                                fontSize: 'clamp(0.8rem, 2vw, 1rem)',
+                                fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
                                 fontFamily: 'Courier New, monospace',
-                                marginTop: '0.5rem',
+                                marginTop: 'clamp(0.3rem, 0.5vw, 0.5rem)',
                                 textAlign: 'center',
                                 textShadow: '0 0 10px #39FF14'
                             }}
@@ -484,7 +485,7 @@ const IntroSequence = ({ onComplete }) => {
                             display: 'flex',
                             alignItems: 'flex-start',
                             justifyContent: 'flex-start',
-                            padding: 'clamp(1.5rem, 3vw, 3rem)',
+                            padding: 'clamp(0.75rem, 2.5vw, 3rem)',
                             position: 'relative',
                             zIndex: 10,
                             backgroundColor: 'rgba(0, 0, 0, 0.9)'
@@ -497,20 +498,20 @@ const IntroSequence = ({ onComplete }) => {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            border: '2px solid rgba(0, 217, 255, 0.3)',
-                            borderRadius: '8px',
-                            padding: 'clamp(1rem, 2vw, 2rem)',
+                            border: '1px solid rgba(0, 217, 255, 0.3)',
+                            borderRadius: 'clamp(4px, 1vw, 8px)',
+                            padding: 'clamp(0.75rem, 1.5vw, 2rem)',
                             backgroundColor: 'rgba(0, 0, 0, 0.8)',
                             boxShadow: '0 0 20px rgba(0, 217, 255, 0.2), inset 0 0 60px rgba(0, 217, 255, 0.05)',
                             overflow: 'auto'
                         }}>
                             {/* Terminal Header */}
                             <div style={{
-                                marginBottom: '1rem',
-                                paddingBottom: '0.5rem',
+                                marginBottom: 'clamp(0.5rem, 1vw, 1rem)',
+                                paddingBottom: 'clamp(0.25rem, 0.5vw, 0.5rem)',
                                 borderBottom: '1px solid rgba(0, 217, 255, 0.2)',
                                 color: '#00D9FF',
-                                fontSize: 'clamp(0.8rem, 1.5vw, 1rem)',
+                                fontSize: 'clamp(0.7rem, 1.3vw, 1rem)',
                                 fontFamily: 'Courier New, monospace'
                             }}>
                                 root@cynet:~#
@@ -518,10 +519,11 @@ const IntroSequence = ({ onComplete }) => {
 
                             <pre style={{
                                 fontFamily: 'Courier New, monospace',
-                                fontSize: 'clamp(0.9rem, 2vw, 1.2rem)',
-                                lineHeight: '1.6',
+                                fontSize: 'clamp(0.7rem, 1.6vw, 1.2rem)',
+                                lineHeight: '1.5',
                                 whiteSpace: 'pre-wrap',
-                                margin: 0
+                                margin: 0,
+                                wordBreak: 'break-word'
                             }}>
                                 {terminalText.split('\n').map((line, i) => (
                                     <div key={i} style={{
@@ -565,10 +567,11 @@ const IntroSequence = ({ onComplete }) => {
                             alt="JIMS Logo"
                             style={{
                                 position: 'absolute',
-                                top: '0.5rem',
-                                left: 'clamp(1rem, 3vw, 2rem)',
-                                height: 'clamp(60px, 10vw, 110px)',
+                                top: 'clamp(0.5rem, 1.5vw, 1rem)',
+                                left: 'clamp(0.5rem, 2vw, 1.5rem)',
+                                height: 'clamp(40px, 8vw, 110px)',
                                 width: 'auto',
+                                maxWidth: '25vw',
                                 opacity: 0.9,
                                 filter: 'brightness(1.8)',
                                 zIndex: 20
@@ -581,10 +584,11 @@ const IntroSequence = ({ onComplete }) => {
                             alt="Enigma Logo"
                             style={{
                                 position: 'absolute',
-                                top: '1rem',
-                                right: 'clamp(1rem, 3vw, 2rem)',
-                                height: 'clamp(50px, 7vw, 80px)',
+                                top: 'clamp(0.5rem, 1.5vw, 1rem)',
+                                right: 'clamp(0.5rem, 2vw, 1.5rem)',
+                                height: 'clamp(35px, 6vw, 80px)',
                                 width: 'auto',
+                                maxWidth: '20vw',
                                 opacity: 0.9,
                                 filter: 'brightness(1.8)',
                                 zIndex: 20
@@ -597,24 +601,25 @@ const IntroSequence = ({ onComplete }) => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            gap: 'clamp(1.5rem, 5vw, 2.5rem)',
+                            gap: 'clamp(1rem, 3vw, 2.5rem)',
                             textAlign: 'center',
                             width: '100%',
                             maxWidth: '1200px',
-                            padding: '0 clamp(1.2rem, 4vw, 2rem)'
+                            padding: '0 clamp(0.75rem, 3vw, 2rem)',
+                            paddingTop: 'clamp(3rem, 8vw, 0)'
                         }}>
                             {/* Save The Date - Small Accent */}
                             <motion.p
                                 style={{
-                                    color: '#9500ff',
-                                    fontSize: 'clamp(1.2rem, 3vw, 2rem)',
+                                    color: '#aa00ff',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 2rem)',
                                     fontFamily: 'Courier New, monospace',
-                                    letterSpacing: '0.4em',
+                                    letterSpacing: 'clamp(0.15em, 0.5vw, 0.4em)',
                                     fontWeight: 'bold',
                                     textShadow: '0 0 12px rgba(157, 0, 255, 0.6)',
                                     textTransform: 'uppercase',
-                                    marginBottom: '3rem',
-                                    marginTop: '-2rem'
+                                    marginBottom: 'clamp(1rem, 3vw, 3rem)',
+                                    marginTop: 'clamp(-1rem, -2vw, -2rem)'
                                 }}
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -628,13 +633,13 @@ const IntroSequence = ({ onComplete }) => {
                                 className="glitch-text"
                                 style={{
                                     color: '#FFFFFF',
-                                    fontSize: 'clamp(3rem, 12vw, 6.5rem)',
+                                    fontSize: 'clamp(2.5rem, 10vw, 6.5rem)',
                                     fontFamily: "'Luckiest Guy', cursive",
-                                    letterSpacing: 'clamp(4px, 2vw, 12px)',
+                                    letterSpacing: 'clamp(2px, 1.5vw, 12px)',
                                     fontWeight: 'normal',
-                                    WebkitTextStroke: '2px transparent',
+                                    WebkitTextStroke: 'clamp(1px, 0.2vw, 2px) transparent',
                                     textAlign: 'center',
-                                    marginTop: '-2rem',
+                                    marginTop: 'clamp(-1rem, -2vw, -2rem)',
                                     textShadow: `
                                         3px 3px 0px rgba(255, 0, 85, 1),
                                         -3px -3px 0px rgba(0, 217, 255, 1),
@@ -722,20 +727,27 @@ const IntroSequence = ({ onComplete }) => {
                                 <br />
                                 
                             </motion.h1>
-                            <span style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)' }}>
+                            <span style={{ 
+                                fontSize: 'clamp(0.85rem, 3vw, 2rem)',
+                                lineHeight: '1.4',
+                                display: 'block',
+                                marginTop: 'clamp(-0.5rem, -1vw, 0)',
+                                padding: '0 clamp(0.5rem, 2vw, 1rem)'
+                            }}>
                                     The Unseen face Of Technological Innovation
                                 </span>
 
                             {/* Date */}
                             <motion.div
                                 style={{
-                                    color: '#FF0000',
-                                    fontSize: 'clamp(2rem, 4.5vw, 2.3rem)',
+                                    color: '#ff0059',
+                                    fontSize: 'clamp(1.2rem, 4vw, 2.3rem)',
                                     fontFamily: 'Courier New, monospace',
                                     fontWeight: 'bold',
                                     textAlign: 'center',
                                     textShadow: '0 0 12px rgba(255, 0, 0, 0.4)',
-                                    marginTop: '-0.5rem'
+                                    marginTop: 'clamp(-0.25rem, -0.5vw, -0.5rem)',
+                                    letterSpacing: 'clamp(1px, 0.3vw, 3px)'
                                 }}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{
@@ -770,7 +782,8 @@ const IntroSequence = ({ onComplete }) => {
                                     display: 'flex',
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    marginTop: 'clamp(1rem, 3vw, 2rem)'
+                                    marginTop: 'clamp(0.5rem, 2vw, 2rem)',
+                                    width: '100%'
                                 }}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -782,10 +795,11 @@ const IntroSequence = ({ onComplete }) => {
                                         gridTemplateColumns: 'repeat(4, 1fr)',
                                         backdropFilter: 'blur(14px)',
                                         background: 'linear-gradient(145deg, rgba(0,255,150,0.08), rgba(0,255,150,0.02))',
-                                        borderRadius: '20px',
+                                        borderRadius: 'clamp(10px, 2vw, 20px)',
                                         border: '1px solid rgba(0,255,150,0.3)',
                                         overflow: 'hidden',
-                                        minWidth: 'clamp(280px, 60vw, 520px)'
+                                        width: '100%',
+                                        maxWidth: 'clamp(280px, 85vw, 520px)'
                                     }}
                                     animate={{
                                         boxShadow: [
@@ -825,11 +839,14 @@ const IntroSequence = ({ onComplete }) => {
                                         <div
                                             key={index}
                                             style={{
-                                                padding: 'clamp(0.6rem, 3vw, 1rem)',
+                                                padding: 'clamp(0.4rem, 2vw, 1rem)',
                                                 textAlign: 'center',
                                                 borderRight: index !== 3
                                                     ? '1px solid rgba(0,255,150,0.2)'
-                                                    : 'none'
+                                                    : 'none',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                justifyContent: 'center'
                                             }}
                                         >
                                             <motion.div
@@ -873,22 +890,24 @@ const IntroSequence = ({ onComplete }) => {
                                                     }
                                                 }}
                                                 style={{
-                                                    fontSize: 'clamp(2rem, 6vw, 4rem)',
+                                                    fontSize: 'clamp(1.5rem, 5vw, 4rem)',
                                                     fontFamily: "'Share Tech Mono', monospace",
                                                     color: '#39FF14',
-                                                    letterSpacing: '0.05em'
+                                                    letterSpacing: 'clamp(0.02em, 0.05vw, 0.05em)',
+                                                    lineHeight: '1.2'
                                                 }}
                                             >
                                                 {String(item.value).padStart(2, '0')}
                                             </motion.div>
 
                                             <div style={{
-                                                fontSize: 'clamp(0.6rem, 1.5vw, 0.8rem)',
+                                                fontSize: 'clamp(0.5rem, 1.2vw, 0.8rem)',
                                                 fontFamily: 'Courier New, monospace',
-                                                letterSpacing: '0.3em',
-                                                marginTop: '0.6rem',
+                                                letterSpacing: 'clamp(0.1em, 0.3vw, 0.3em)',
+                                                marginTop: 'clamp(0.2rem, 0.5vw, 0.6rem)',
                                                 opacity: 0.7,
-                                                color: '#E0E0E0'
+                                                color: '#E0E0E0',
+                                                lineHeight: '1'
                                             }}>
                                                 {item.label}
                                             </div>
