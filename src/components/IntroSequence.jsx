@@ -601,21 +601,20 @@ const IntroSequence = ({ onComplete }) => {
                             textAlign: 'center',
                             width: '100%',
                             maxWidth: '1200px',
-                            padding: '0 clamp(1rem, 4vw, 2rem)'
+                            padding: '0 clamp(1.2rem, 4vw, 2rem)'
                         }}>
-
-                            {/* Save The Date - Small Accent */}
                             {/* Save The Date - Small Accent */}
                             <motion.p
                                 style={{
-                                    color: '#FF0055',
-                                    fontSize: 'clamp(1.8rem, 3vw, 2rem)',
+                                    color: '#9500ff',
+                                    fontSize: 'clamp(1.2rem, 3vw, 2rem)',
                                     fontFamily: 'Courier New, monospace',
                                     letterSpacing: '0.4em',
                                     fontWeight: 'bold',
-                                    textShadow: '0 0 12px rgba(255, 0, 85, 0.6)',
+                                    textShadow: '0 0 12px rgba(157, 0, 255, 0.6)',
                                     textTransform: 'uppercase',
-                                    marginBottom: '-1rem'
+                                    marginBottom: '3rem',
+                                    marginTop: '-2rem'
                                 }}
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -634,6 +633,8 @@ const IntroSequence = ({ onComplete }) => {
                                     letterSpacing: 'clamp(4px, 2vw, 12px)',
                                     fontWeight: 'normal',
                                     WebkitTextStroke: '2px transparent',
+                                    textAlign: 'center',
+                                    marginTop: '-2rem',
                                     textShadow: `
                                         3px 3px 0px rgba(255, 0, 85, 1),
                                         -3px -3px 0px rgba(0, 217, 255, 1),
@@ -717,17 +718,23 @@ const IntroSequence = ({ onComplete }) => {
                                     setTimeout(() => setGlitchIntensity(0), 300);
                                 }}
                             >
-                                <ScrambleText text="PROTOCOL: CYNET" duration={1000} delay={600} />
+                                CYNET
+                                <br />
+                                
                             </motion.h1>
+                            <span style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)' }}>
+                                    The Unseen face Of Technological Innovation
+                                </span>
 
                             {/* Date */}
                             <motion.div
                                 style={{
-                                    color: '#C084FC',
-                                    fontSize: 'clamp(1.2rem, 4vw, 2rem)',
+                                    color: '#FF0000',
+                                    fontSize: 'clamp(2rem, 4.5vw, 2.3rem)',
                                     fontFamily: 'Courier New, monospace',
                                     fontWeight: 'bold',
-                                    textShadow: '0 0 12px rgba(192, 132, 252, 0.4)',
+                                    textAlign: 'center',
+                                    textShadow: '0 0 12px rgba(255, 0, 0, 0.4)',
                                     marginTop: '-0.5rem'
                                 }}
                                 initial={{ opacity: 0, y: 20 }}
