@@ -612,14 +612,14 @@ const IntroSequence = ({ onComplete }) => {
                             <motion.p
                                 style={{
                                     color: '#aa00ff',
-                                    fontSize: 'clamp(0.85rem, 2.5vw, 2rem)',
+                                    fontSize: 'clamp(1.2rem, 2.5vw, 2rem)',
                                     fontFamily: 'Courier New, monospace',
                                     letterSpacing: 'clamp(0.15em, 0.5vw, 0.4em)',
                                     fontWeight: 'bold',
                                     textShadow: '0 0 12px rgba(157, 0, 255, 0.6)',
                                     textTransform: 'uppercase',
-                                    marginBottom: 'clamp(1rem, 3vw, 3rem)',
-                                    marginTop: 'clamp(-1rem, -2vw, -2rem)'
+                                    marginBottom: 'clamp(4rem, 3vw, 4.5rem)',
+                                    marginTop: 'clamp(2rem, 2vw, 3rem)'
                                 }}
                                 initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -633,7 +633,7 @@ const IntroSequence = ({ onComplete }) => {
                                 className="glitch-text"
                                 style={{
                                     color: '#FFFFFF',
-                                    fontSize: 'clamp(2.5rem, 10vw, 6.5rem)',
+                                    fontSize: 'clamp(3rem, 10vw, 6.5rem)',
                                     fontFamily: "'Luckiest Guy', cursive",
                                     letterSpacing: 'clamp(2px, 1.5vw, 12px)',
                                     fontWeight: 'normal',
@@ -728,7 +728,7 @@ const IntroSequence = ({ onComplete }) => {
                                 
                             </motion.h1>
                             <span style={{ 
-                                fontSize: 'clamp(0.85rem, 3vw, 2rem)',
+                                fontSize: 'clamp(1rem, 3vw, 2rem)',
                                 lineHeight: '1.4',
                                 display: 'block',
                                 marginTop: 'clamp(-0.5rem, -1vw, 0)',
@@ -741,7 +741,7 @@ const IntroSequence = ({ onComplete }) => {
                             <motion.div
                                 style={{
                                     color: '#ff0059',
-                                    fontSize: 'clamp(1.2rem, 4vw, 2.3rem)',
+                                    fontSize: 'clamp(2rem, 4vw, 2.3rem)',
                                     fontFamily: 'Courier New, monospace',
                                     fontWeight: 'bold',
                                     textAlign: 'center',
